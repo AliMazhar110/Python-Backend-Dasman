@@ -6,8 +6,10 @@ from typing import List, Optional
 import uvicorn
 import re
 import time
+from dotenv import load_dotenv
+import os
 
-Entrez.email = "excavto554@gmail.com"
+Entrez.email = os.getenv("ENTREZ_EMAIL")
 
 app = FastAPI()
 
