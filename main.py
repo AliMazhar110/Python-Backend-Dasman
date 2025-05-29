@@ -209,7 +209,7 @@ def fetch_pubmed_records( affiliation: str, from_date: str, to_date: Optional[st
       "Open Access":                "",
       "KU":                         "",
       "MOH":                        "",
-      "Other Nation Institutions":  "",
+      "Other National Institutions":  "",
       "National All":               "",
       "Regional":                   "",
       "International":              "",
