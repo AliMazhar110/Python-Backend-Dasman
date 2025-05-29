@@ -178,7 +178,11 @@ def fetch_pubmed_records( affiliation: str, from_date: str, to_date: Optional[st
       if ref.attributes.get("RefType") == "ErratumIn":
         refsource = ref.get("RefSource", "").strip()
         erratum = f"Erratum in: {refsource}"
-        break  # Only include the first erratum if there are multiple
+        break
+      elif ref.attributes.get("RefType") == "ErratumFor":
+        refsource = ref.get("RefSource", "").strip()
+        erratum = f"Erratum for: {refsource}"
+        break # Only include the first erratum if there are multiple
 
 
     citation = f"{author_str}. {title} {source} {erratum} PMID: {pmid}"
